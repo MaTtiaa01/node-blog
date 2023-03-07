@@ -4,6 +4,23 @@
         <main>
             <h1>Blog News</h1>
             <%- include('../partials/nav')%>
+
+                <div class="container">
+                    <div class="row">
+                        <% if(blogs.length> 0){ %>
+                            <% blogs.forEach(blog=>{ %>
+                                <div class="col">
+                                    <h2>
+                                        <%= blog.title %>
+                                    </h2>
+                                </div>
+                                <%})%>
+                                    <% }else{ %>
+                                        <h3>No blogs available yet!</h3>
+                                        <% } %>
+
+                    </div>
+                </div>
         </main>
     </body>
 

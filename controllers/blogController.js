@@ -9,6 +9,22 @@ const blog_index = (req, res) => {
         .catch(err => console.log(err))
 }
 
+const blog_create = (req, res) => {
+    res.render('blogs/create')
+}
+
+const blog_store = (req, res) => {
+    const new_blog = new Blog(req.body)
+
+    new_blog.save()
+        .then((result) => {
+            res.redirect('/blogs')
+        })
+        .catch(err => console.log(err))
+}
+
 module.exports = {
-    blog_index
+    blog_index,
+    blog_create,
+    blog_store
 }

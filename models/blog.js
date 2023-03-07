@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const blogSchema = new Schema({
     title: {
-        required: true,
-        type: String
+        type: String,
+        required: true
     },
     description: {
         required: true,

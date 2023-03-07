@@ -7,7 +7,7 @@ const app = express();
 //connect to db
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://mattia2001:KswyCRd5Xrt9KyFq@cluster0.gumz4jb.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://mattia2001:KswyCRd5Xrt9KyFq@cluster0.gumz4jb.mongodb.net/node-blogs')
     .then((results) => {
         app.listen('4000')
     })
@@ -33,5 +33,5 @@ app.use((req, res, next) => {
 
 
 //routes
-app.use('/blog', blogRoutes)
+app.use('/blogs', blogRoutes)
 
