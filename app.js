@@ -1,8 +1,17 @@
 const express = require('express');
 const blogRoutes = require('./routes/blogRoutes')
 const morgan = require('morgan')
+const path = require('path')
+const _ = require('lodash')
 
 const app = express();
+
+// //import bootstrap
+// app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
+// app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
+// app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
+
+
 
 //connect to db
 const mongoose = require('mongoose')
@@ -34,4 +43,10 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/blogs', blogRoutes)
+
+
+//404 page not found
+app.use((req, res) => {
+    res.status(404).render('404')
+})
 
