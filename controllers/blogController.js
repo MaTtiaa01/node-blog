@@ -23,8 +23,14 @@ const blog_store = (req, res) => {
         .catch(err => console.log(err))
 }
 
+const blog_edit = (req, res) => {
+    res.render('blogs/update')
+}
+
+
 module.exports = {
     blog_index,
     blog_create,
-    blog_store
+    blog_store,
+    blog_edit
 }
