@@ -44,6 +44,10 @@ app.use((req, res, next) => {
 //routes
 app.use('/blogs', blogRoutes)
 
+app.get('/blogs/about', (req, res) => {
+    res.render('about')
+})
+
 
 //404 page not found
 app.use((req, res) => {
