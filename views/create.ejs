@@ -1,9 +1,10 @@
-<%- include('../partials/head')%>
+<%- include('./partials/head')%>
 
 
 
     <main>
-        <%- include('../partials/nav')%>
+        <%- include('./partials/nav')%>
+
             <form action="/blogs" method="post">
 
                 <!-- title -->
@@ -30,10 +31,10 @@
                     <small id="helpId" class="form-text text-muted">write the body of the blog</small>
                 </div>
 
-                <button type="submit">EDIT</button>
+                <button type="submit">ADD</button>
             </form>
     </main>
 
 
 
-    <%- include('../partials/footer')%>
+    <%- include('./partials/footer')%>

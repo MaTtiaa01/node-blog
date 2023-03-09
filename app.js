@@ -1,8 +1,8 @@
 const express = require('express');
 const blogRoutes = require('./routes/blogRoutes')
 const morgan = require('morgan')
-const path = require('path')
-const _ = require('lodash')
+// const path = require('path')
+// const _ = require('lodash')
 
 const app = express();
 
@@ -42,9 +42,14 @@ app.use((req, res, next) => {
 
 
 //routes
+app.get('/', (req, res) => {
+    res.redirect('/blogs');
+});
+
+
 app.use('/blogs', blogRoutes)
 
-app.get('/blogs/about', (req, res) => {
+app.get('/about', (req, res) => {
     res.render('about')
 })
 

@@ -8,12 +8,12 @@ const blogSchema = new Schema({
         required: true
     },
     description: {
+        type: String,
         required: true,
-        type: String
     },
     body: {
+        type: String,
         required: true,
-        type: String
     }
 }, { timestamps: true })
 
