@@ -4,14 +4,23 @@
     <main>
         <%- include('./partials/nav')%>
 
-            <div class="container">
-                <div class="row">
+            <div class="container py-5">
+                <div class="new_blog p-3 d-inline-block">
+                    <span> Write a new Blog</span>
+                    <a href="/blogs/create"><i class="fa-solid fa-plus"></i></a>
+                </div>
+                <div class="row row-cols-2 g-4">
                     <% if (blogs.length> 0) { %>
                         <% blogs.forEach(blog=> { %>
                             <a class="single col" href="/blogs/<%= blog._id %>">
-                                <h3 class="title">
-                                    <%= blog.title %>
-                                </h3>
+                                <div class="card blog">
+                                    <h3 class="title text-uppercase">
+                                        <%= blog.title %>
+                                    </h3>
+                                    <div class="description">
+                                        <%= blog.description %>
+                                    </div>
+                                </div>
                             </a>
                             <% }) %>
                                 <% } else { %>

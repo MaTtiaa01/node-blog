@@ -11,8 +11,29 @@ a {
     border: 1px solid transparent;
 }
 
-a:hover {
+a.nav-link:hover {
     border: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+/* index */
+
+.new_blog {
+    background-color: bisque;
+}
+
+.new_blog>a {
+    color: blue;
+}
+
+.card.blog {
+    height: 200px;
+    padding: 1rem;
+}
+
+.single.col:hover {
+    font-weight: bold;
     color: black;
     text-decoration: none;
 }

@@ -37,6 +37,14 @@ const blog_create_post = (req, res) => {
         .catch(err => console.log(err))
 }
 
+const blog_delete = (req, res) => {
+    const id = req.params.id
+    Blog.findByIdAndDelete(id)
+        .then(result => {
+            res.json({ redirect: '/blogs' })
+        })
+        .catch(err => console.log(err))
+}
 
 
 module.exports = {
@@ -44,4 +52,5 @@ module.exports = {
     blog_details,
     blog_create_get,
     blog_create_post,
+    blog_delete
 }
