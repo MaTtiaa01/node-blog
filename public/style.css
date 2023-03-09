@@ -7,4 +7,12 @@
 a {
     text-decoration: none;
     color: black;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+}
+
+a:hover {
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
 }
