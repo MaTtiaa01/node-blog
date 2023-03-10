@@ -11,6 +11,11 @@ a {
     border: 1px solid transparent;
 }
 
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* nav */
 
@@ -42,10 +47,8 @@ a.nav-link:hover {
     background-color: whitesmoke;
 }
 
-.single.col:hover {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
+.single.col:hover>.card {
+    box-shadow: 10px 10px black;
 }
 
 /* single-blog */
