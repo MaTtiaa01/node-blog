@@ -37,6 +37,30 @@ const blog_create_post = (req, res) => {
         .catch(err => console.log(err))
 }
 
+const blog_update_get = (req, res) => {
+    const id = req.params.id
+    Blog.findById(id)
+        .then(result => {
+            res.render('update', { blog: result })
+        })
+        .catch(err => console.log(err))
+}
+
+const blog_update_post = (req, res) => {
+    const id = req.params.id
+    console.log(req.body);
+    Blog.findById(id)
+        .then((result) => {
+            result.title = req.body.title
+            result.description = req.body.description
+            result.body = req.body.body
+            result.save()
+            res.redirect('/blogs')
+        })
+        .catch(err => console.log(err))
+}
+
+
 const blog_delete = (req, res) => {
     const id = req.params.id
     Blog.findByIdAndDelete(id)
@@ -47,10 +71,14 @@ const blog_delete = (req, res) => {
 }
 
 
+
+
 module.exports = {
     blog_index,
     blog_details,
     blog_create_get,
     blog_create_post,
-    blog_delete
+    blog_update_get,
+    blog_update_post,
+    blog_delete,
 }
