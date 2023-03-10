@@ -63,3 +63,13 @@ a.nav-link:hover {
 #delete:hover {
     color: red;
 }
+
+#update {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+}
+
+#update:hover {
+    color: red;
+}
