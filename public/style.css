@@ -33,6 +33,14 @@ a.nav-link:hover {
 
 /* index */
 
+.main_page {
+    background-image: url('./img/newspaper.jpg.avif');
+    min-height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .new_blog {
     background-color: bisque;
 }
